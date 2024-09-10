@@ -1,76 +1,16 @@
-# plugin-starter
+# halo-plugin-power-paste
 
-Halo 2.0 插件开发快速开始模板。
+为默认编辑器提供从WORD等直接复制粘贴的能力。
 
-## 开发环境
+## 使用方式
 
-插件开发的详细文档请查阅：<https://docs.halo.run/developer-guide/plugin/introduction>
+1. 下载，目前提供以下两个下载方式：
+    - GitHub Releases：访问 [Releases](https://github.com/xinkeng0/halo-plugin-power-paste/releases) 下载 Assets 中的 JAR 文件。
 
-所需环境：
+## 用法说明
 
-1. Java 17
-2. Node 20
-3. pnpm 9
-4. Docker (可选)
-
-克隆项目：
-
-```bash
-git clone git@github.com:halo-sigs/plugin-starter.git
-
-# 或者当你 fork 之后
-
-git clone git@github.com:{your_github_id}/plugin-starter.git
-```
-
-```bash
-cd path/to/plugin-starter
-```
-
-### 运行方式 1（推荐）
-
-> 此方式需要本地安装 Docker
-
-```bash
-# macOS / Linux
-./gradlew pnpmInstall
-
-# Windows
-./gradlew.bat pnpmInstall
-```
-
-```bash
-# macOS / Linux
-./gradlew haloServer
-
-# Windows
-./gradlew.bat haloServer
-```
-
-执行此命令后，会自动创建一个 Halo 的 Docker 容器并加载当前的插件，更多文档可查阅：<https://docs.halo.run/developer-guide/plugin/basics/devtools>
-
-### 运行方式 2
-
-> 此方式需要使用源码运行 Halo
-
-编译插件：
-
-```bash
-# macOS / Linux
-./gradlew build
-
-# Windows
-./gradlew.bat build
-```
-
-修改 Halo 配置文件：
-
-```yaml
-halo:
-  plugin:
-    runtime-mode: development
-    fixedPluginPath:
-      - "/path/to/plugin-starter"
-```
-
-最后重启 Halo 项目即可。
+### 默认编辑器
+TODO
+- [x] 若粘贴的内容包含图片，则自动上传到附件。
+- [x] 从Microsoft WORD复制内容到编辑器，同时支持文本与图片。
+- [ ] 上传的附件策略支持配置。
